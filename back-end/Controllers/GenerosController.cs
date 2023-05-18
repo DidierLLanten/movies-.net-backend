@@ -5,7 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace back_end.Controllers
 {
     [Route("api/[controller]")]
-    public class GenerosController: ControllerBase
+    public class GenerosController : ControllerBase
     {
         private readonly IRepositorio repositorio;
 
@@ -15,24 +15,26 @@ namespace back_end.Controllers
         }
 
         [HttpGet]
-        public List<Genero> Get()
+        public ActionResult<List<Genero>> Get()
         {
             return repositorio.ObtenerTodosLosGeneros();
         }
 
         [HttpGet("{id:int=1}")]
-        public Genero Get(int id) {
+        public ActionResult<Genero> Get(int id)
+        {
             var genero = repositorio.ObtenerPorId(id);
-            if(genero == null)
+            if (genero == null)
             {
-                //return NotFound();
+                return NotFound();
             }
 
             return genero;
         }
 
         [HttpPost]
-        public void Post() { 
+        public void Post()
+        {
 
         }
 
@@ -40,9 +42,9 @@ namespace back_end.Controllers
         public void Put() { }
 
         [HttpDelete]
-        public void Delete() 
+        public void Delete()
         {
 
-        }    
+        }
     }
 }
