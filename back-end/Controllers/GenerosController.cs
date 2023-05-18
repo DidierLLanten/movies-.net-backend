@@ -18,7 +18,18 @@ namespace back_end.Controllers
         public List<Genero> Get()
         {
             return repositorio.ObtenerTodosLosGeneros();
-        }       
+        }
+
+        [HttpGet("{id:int=1}")]
+        public Genero Get(int id) {
+            var genero = repositorio.ObtenerPorId(id);
+            if(genero == null)
+            {
+                //return NotFound();
+            }
+
+            return genero;
+        }
 
         [HttpPost]
         public void Post() { 
