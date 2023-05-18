@@ -17,5 +17,10 @@ namespace back_end.Repositorios
         public List<Genero> ObtenerTodosLosGeneros() { 
             return _generos;
         }
+
+        public Genero? ObtenerPorId(int id) {
+            // return new Genero() { Id = id };
+            return _generos.FirstOrDefault(gender => gender.Id == id);
+        }
     }
 }

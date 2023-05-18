@@ -1,8 +1,11 @@
-﻿using back_end.Repositorios;
+﻿using back_end.Entidades;
+using back_end.Repositorios;
+using Microsoft.AspNetCore.Mvc;
 
 namespace back_end.Controllers
 {
-    public class GenerosController
+    [Route("api/[controller]")]
+    public class GenerosController: ControllerBase
     {
         private readonly IRepositorio repositorio;
 
@@ -10,5 +13,25 @@ namespace back_end.Controllers
         {
             this.repositorio = repositorio;
         }
+
+        [HttpGet]
+        public List<Genero> Get()
+        {
+            return repositorio.ObtenerTodosLosGeneros();
+        }       
+
+        [HttpPost]
+        public void Post() { 
+
+        }
+
+        [HttpPut]
+        public void Put() { }
+
+        [HttpDelete]
+        public void Delete() 
+        {
+
+        }    
     }
 }
