@@ -8,7 +8,7 @@ namespace back_end.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public class GenerosController : ControllerBase
     {
         private readonly IRepositorio repositorio;
@@ -40,6 +40,7 @@ namespace back_end.Controllers
             var genero = repositorio.ObtenerPorId(id);
             if (genero == null)
             {
+                throw new ApplicationException($"El genero de ID {id} no fue encontrado °°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°°|");
                 logger.LogWarning($"No pudimos encontrar, un genero por el ID, {id}, msj LOG+++++++++++++");
                 return NotFound();
             }
