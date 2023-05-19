@@ -9,24 +9,35 @@ namespace back_end.Controllers
     public class GenerosController : ControllerBase
     {
         private readonly IRepositorio repositorio;
+        private readonly ILogger<GenerosController> logger;
 
-        public GenerosController(IRepositorio repositorio)
+        public GenerosController(IRepositorio repositorio, ILogger<GenerosController> logger)
         {
             this.repositorio = repositorio;
+            this.logger = logger;
         }
 
         [HttpGet]
         public ActionResult<List<Genero>> Get()
         {
+            logger.LogInformation("Vamos a mostrar los generos, msj LOG----------------------------------------------");
             return repositorio.ObtenerTodosLosGeneros();
+        }
+
+        [HttpGet("guid")]
+        public ActionResult<Guid> GetGUID()
+        {
+            return repositorio.ObtenerGUID();
         }
 
         [HttpGet("{id:int=1}")]
         public ActionResult<Genero> Get(int id)
         {
+            logger.LogDebug($"Obteniendo un genero por el ID, {id}, msj LOG");
             var genero = repositorio.ObtenerPorId(id);
             if (genero == null)
             {
+                logger.LogWarning($"No pudimos encontrar, un genero por el ID, {id}, msj LOG+++++++++++++");
                 return NotFound();
             }
 
@@ -36,6 +47,7 @@ namespace back_end.Controllers
         [HttpPost]
         public ActionResult Post([FromBody] Genero genero)
         {
+            repositorio.CrearGenero(genero);
             return NoContent();
         }
 
