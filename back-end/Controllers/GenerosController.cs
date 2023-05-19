@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace back_end.Controllers
 {
     [Route("api/[controller]")]
+    [ApiController]
     public class GenerosController : ControllerBase
     {
         private readonly IRepositorio repositorio;
@@ -33,9 +34,9 @@ namespace back_end.Controllers
         }
 
         [HttpPost]
-        public void Post()
+        public ActionResult Post([FromBody] Genero genero)
         {
-
+            return NoContent();
         }
 
         [HttpPut]
