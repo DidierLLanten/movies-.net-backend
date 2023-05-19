@@ -30,3 +30,10 @@ C:\Users\Didie\Desktop\netAngular\back-end\back-end\obj\Debug\net6.0\refint\back
 C:\Users\Didie\Desktop\netAngular\back-end\back-end\obj\Debug\net6.0\back-end.pdb
 C:\Users\Didie\Desktop\netAngular\back-end\back-end\obj\Debug\net6.0\back-end.genruntimeconfig.cache
 C:\Users\Didie\Desktop\netAngular\back-end\back-end\obj\Debug\net6.0\ref\back-end.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
