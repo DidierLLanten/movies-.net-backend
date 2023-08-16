@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using back_end.Validaciones;
+using System.ComponentModel.DataAnnotations;
 
 namespace back_end.Entidades
 {
@@ -7,10 +8,11 @@ namespace back_end.Entidades
         public int Id { get; set; }
 
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(maximumLength: 8, ErrorMessage = "El campo {0} acepta maximo 10 caracteres")]
-        // [PrimeraLetraMayuscula]
-        public String? Nombre { get; set; }
+        [StringLength(maximumLength: 8, ErrorMessage = "El campo {0} acepta maximo 8 caracteres")]
+        //[PrimeraLetraMayuscula]
+        public string? Nombre { get; set; }
 
+        // Validacion para la primera letra debe ser mayuscuala 2 forma de hacerlo
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
         {
             if (!string.IsNullOrEmpty(Nombre))

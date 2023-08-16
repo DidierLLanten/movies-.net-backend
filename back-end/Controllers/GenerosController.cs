@@ -3,6 +3,7 @@ using back_end.Repositorios;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace back_end.Controllers
 {
@@ -13,18 +14,22 @@ namespace back_end.Controllers
     {
         private readonly IRepositorio repositorio;
         private readonly ILogger<GenerosController> logger;
+        private readonly ApplicationDbContext context;
 
-        public GenerosController(IRepositorio repositorio, ILogger<GenerosController> logger)
+        public GenerosController(IRepositorio repositorio, ILogger<GenerosController> logger,
+            ApplicationDbContext context)
         {
             this.repositorio = repositorio;
             this.logger = logger;
+            this.context = context;
         }
 
         [HttpGet]
-        public ActionResult<List<Genero>> Get()
+        public async Task<ActionResult<List<Genero>>> Get()
         {
             logger.LogInformation("Vamos a mostrar los generos, msj LOG----------------------------------------------");
-            return repositorio.ObtenerTodosLosGeneros();
+            // return repositorio.ObtenerTodosLosGeneros();
+            return await context.Generos.ToListAsync();
         }
 
         [HttpGet("guid")]
@@ -48,9 +53,11 @@ namespace back_end.Controllers
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] Genero genero)
+        public async Task<ActionResult> Post([FromBody] Genero genero)
         {
-            repositorio.CrearGenero(genero);
+            //repositorio.CrearGenero(genero);
+            context.Add(genero);
+            await context.SaveChangesAsync();
             return NoContent();
         }
 

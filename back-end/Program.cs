@@ -1,6 +1,8 @@
+using back_end;
 using back_end.Filtros;
 using back_end.Repositorios;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +12,10 @@ var configuration = new ConfigurationBuilder()
     .Build();
 
 // Add services to the container.
+builder.Services.AddDbContext<ApplicationDbContext>(options => {
+    options.UseSqlServer(configuration.GetConnectionString("defaultConnection"));
+    });
+
 builder.Services.AddCors(options =>
 {
     string frontendURL = configuration["frontend_url"];
