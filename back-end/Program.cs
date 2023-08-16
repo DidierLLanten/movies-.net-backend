@@ -12,6 +12,9 @@ var configuration = new ConfigurationBuilder()
     .Build();
 
 // Add services to the container.
+//builder.Services.AddAutoMapper(typeof(Startup));
+//builder.Services.AddAutoMapper(typeof(Program).Assembly);
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddDbContext<ApplicationDbContext>(options => {
     options.UseSqlServer(configuration.GetConnectionString("defaultConnection"));
     });
