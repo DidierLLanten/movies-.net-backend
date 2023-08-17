@@ -47,17 +47,20 @@ namespace back_end.Controllers
         }
 
         [HttpGet("{id:int=1}")]
-        public ActionResult<Genero> Get(int id)
+        public ActionResult<GeneroDTO> Get(int id)
         {
             logger.LogDebug($"Obteniendo un genero por el ID, {id}, msj LOG");
-            var genero = repositorio.ObtenerPorId(id);
+            /*var genero = repositorio.ObtenerPorId(id);
             if (genero == null)
             {
                 logger.LogWarning($"No pudimos encontrar, un genero por el ID, {id}, msj LOG+++++++++++++");
                 return NotFound();
             }
+            return genero;*/
 
-            return genero;
+            var genero = context.Generos.FirstOrDefault(x => x.Id == id);
+            if (genero == null) { return NotFound(); }
+            return mapper.Map<GeneroDTO>(genero);
         }
 
         [HttpPost]
@@ -70,8 +73,17 @@ namespace back_end.Controllers
             return NoContent();
         }
 
-        [HttpPut]
-        public void Put() { }
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(int Id, [FromBody] GeneroCreacionDTO generoCreacionDTO)
+        {
+            var genero = context.Generos.FirstOrDefault(x => x.Id == Id);
+            if (genero == null) { return NotFound(); }
+
+            genero = mapper.Map(generoCreacionDTO, genero);
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
 
         [HttpDelete]
         public void Delete()
