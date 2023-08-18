@@ -6,7 +6,7 @@ namespace back_end.DTOs
     public class GeneroCreacionDTO
     {
         [Required(ErrorMessage = "El campo {0} es requerido")]
-        [StringLength(maximumLength: 8, ErrorMessage = "El campo {0} acepta maximo 8 caracteres")]
+        [StringLength(maximumLength: 15, ErrorMessage = "El campo {0} acepta maximo 15 caracteres")]
         [PrimeraLetraMayuscula]
         public string Nombre { get; set; }
     }

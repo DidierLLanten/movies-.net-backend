@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using back_end;
 
@@ -11,9 +12,11 @@ using back_end;
 namespace back_end.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230818020202_ActualizarGenero_CrearTBActores")]
+    partial class ActualizarGenero_CrearTBActores
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -38,6 +41,7 @@ namespace back_end.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Foto")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Nombre")
@@ -47,7 +51,7 @@ namespace back_end.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Actores", (string)null);
+                    b.ToTable("Actores");
                 });
 
             modelBuilder.Entity("back_end.Entidades.Genero", b =>
@@ -65,7 +69,7 @@ namespace back_end.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Generos", (string)null);
+                    b.ToTable("Generos");
                 });
 #pragma warning restore 612, 618
         }
