@@ -1,11 +1,37 @@
 {
   "Version": 1,
-  "Hash": "qjMu/SoG5Y3zQG//GHPD04Dk9LHRNf1G0i15JnpvNGI=",
+  "Hash": "vsyyuXHCWb6Jmrk/Tr3q6XNKVqa1zKGx71sjFoOGNTQ=",
   "Source": "back-end",
   "BasePath": "_content/back-end",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": []
+  "DiscoveryPatterns": [
+    {
+      "Name": "back-end\\wwwroot",
+      "Source": "back-end",
+      "ContentRoot": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\",
+      "BasePath": "_content/back-end",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\25ffc585-3559-4a5b-8ed9-f7999fc5ff06.jpg",
+      "SourceId": "back-end",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\",
+      "BasePath": "_content/back-end",
+      "RelativePath": "actores/25ffc585-3559-4a5b-8ed9-f7999fc5ff06.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\actores\\25ffc585-3559-4a5b-8ed9-f7999fc5ff06.jpg"
+    }
+  ]
 }

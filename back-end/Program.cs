@@ -1,6 +1,7 @@
 using back_end;
 using back_end.Filtros;
 using back_end.Repositorios;
+using back_end.Utilidades;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 
@@ -15,9 +16,12 @@ var configuration = new ConfigurationBuilder()
 //builder.Services.AddAutoMapper(typeof(Startup));
 //builder.Services.AddAutoMapper(typeof(Program).Assembly);
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-builder.Services.AddDbContext<ApplicationDbContext>(options => {
+builder.Services.AddTransient<IAlmacenadorArchivos, AlmacenadorArchivosLocal>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+{
     options.UseSqlServer(configuration.GetConnectionString("defaultConnection"));
-    });
+});
 
 builder.Services.AddCors(options =>
 {
@@ -48,6 +52,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseStaticFiles();
 
 app.UseCors();
 
