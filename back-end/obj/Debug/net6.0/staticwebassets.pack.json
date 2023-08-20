@@ -1,12 +1,12 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\0b265b07-258f-4ae7-8259-df46bbbba704.jpg",
-      "PackagePath": "staticwebassets\\actores\\0b265b07-258f-4ae7-8259-df46bbbba704.jpg"
+      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\456c5848-229a-497a-8385-b66c37028346.jpg",
+      "PackagePath": "staticwebassets\\actores\\456c5848-229a-497a-8385-b66c37028346.jpg"
     },
     {
-      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\6c8dce3d-a4cb-4a06-baa6-7a7e456e941c.jpg",
-      "PackagePath": "staticwebassets\\actores\\6c8dce3d-a4cb-4a06-baa6-7a7e456e941c.jpg"
+      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\b5505924-c0f3-4cbb-8d08-7c4002d2251b.jpg",
+      "PackagePath": "staticwebassets\\actores\\b5505924-c0f3-4cbb-8d08-7c4002d2251b.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.back-end.Microsoft.AspNetCore.StaticWebAssets.props",

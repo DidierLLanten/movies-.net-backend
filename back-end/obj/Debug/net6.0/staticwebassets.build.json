@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "EEPQnqIxEL4GI0O8gGINSnE1+yeQ86oIgM8tHZ4Fs2M=",
+  "Hash": "YW8iUM7xFzDo/FxG0efHjPV43ZTbBXSWYdXB2knI0Ao=",
   "Source": "back-end",
   "BasePath": "_content/back-end",
   "Mode": "Default",
@@ -17,12 +17,12 @@
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\0b265b07-258f-4ae7-8259-df46bbbba704.jpg",
+      "Identity": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\456c5848-229a-497a-8385-b66c37028346.jpg",
       "SourceId": "back-end",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\",
       "BasePath": "_content/back-end",
-      "RelativePath": "actores/0b265b07-258f-4ae7-8259-df46bbbba704.jpg",
+      "RelativePath": "actores/456c5848-229a-497a-8385-b66c37028346.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -31,15 +31,15 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\actores\\0b265b07-258f-4ae7-8259-df46bbbba704.jpg"
+      "OriginalItemSpec": "wwwroot\\actores\\456c5848-229a-497a-8385-b66c37028346.jpg"
     },
     {
-      "Identity": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\6c8dce3d-a4cb-4a06-baa6-7a7e456e941c.jpg",
+      "Identity": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\actores\\b5505924-c0f3-4cbb-8d08-7c4002d2251b.jpg",
       "SourceId": "back-end",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\",
       "BasePath": "_content/back-end",
-      "RelativePath": "actores/6c8dce3d-a4cb-4a06-baa6-7a7e456e941c.jpg",
+      "RelativePath": "actores/b5505924-c0f3-4cbb-8d08-7c4002d2251b.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -48,7 +48,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\actores\\6c8dce3d-a4cb-4a06-baa6-7a7e456e941c.jpg"
+      "OriginalItemSpec": "wwwroot\\actores\\b5505924-c0f3-4cbb-8d08-7c4002d2251b.jpg"
     }
   ]
 }
