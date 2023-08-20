@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using back_end.DTOs;
 using back_end.Entidades;
+using back_end.Migrations;
 using back_end.Utilidades;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -31,6 +32,14 @@ namespace back_end.Controllers
             return mapper.Map<List<CineDTO>>(cines);
         }
 
+        [HttpGet("{id:int=1}")]
+        public ActionResult<CineDTO> Get(int id)
+        {
+            var cine = context.Cines.FirstOrDefault(x => x.Id == id);
+            if (cine == null) { return NotFound(); }
+            return mapper.Map<CineDTO>(cine);
+        }
+
 
         [HttpPost]
         public async Task<ActionResult> Post([FromBody] CineCreacionDTO cineCreacionDTO)
@@ -40,6 +49,19 @@ namespace back_end.Controllers
             await context.SaveChangesAsync();
             return NoContent();
         }
+
+        [HttpPut("{id:int}")]
+        public async Task<ActionResult> Put(int Id, [FromBody] CineCreacionDTO cineCreacionDTO)
+        {
+            var cine = context.Cines.FirstOrDefault(x => x.Id == Id);
+            if (cine == null) { return NotFound(); }
+
+            cine = mapper.Map(cineCreacionDTO, cine);
+            await context.SaveChangesAsync();
+
+            return NoContent();
+        }
+
 
         [HttpDelete("{id:int}")]
         public async Task<ActionResult> Delete(int id)
