@@ -11,6 +11,7 @@ namespace back_end.Entidades
         [StringLength(maximumLength: 15, ErrorMessage = "El campo {0} acepta maximo 15 caracteres")]
         //[PrimeraLetraMayuscula]
         public string? Nombre { get; set; }
+        public List<PeliculasGeneros> PeliculasGeneros { get; set; }
 
         // Validacion para la primera letra debe ser mayuscuala 2 forma de hacerlo
         public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)
