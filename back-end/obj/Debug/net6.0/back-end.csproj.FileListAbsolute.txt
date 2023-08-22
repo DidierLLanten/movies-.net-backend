@@ -93,3 +93,4 @@ C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Microsoft.E
 C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\NetTopologySuite.dll
 C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\NetTopologySuite.IO.SqlServerBytes.dll
 C:\Users\Didie\Desktop\netAngular\back-end\back-end\obj\Debug\net6.0\EFCoreSqlServerNetTopologySuite.cs
+C:\Users\Didie\Desktop\netAngular\back-end\back-end\bin\Debug\net6.0\Newtonsoft.Json.dll

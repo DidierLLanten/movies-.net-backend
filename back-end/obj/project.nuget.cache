@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "k1l0zIqGmio2yAnHV7utTqoRc32wAfS+XWVsvIiRR5mUYw4Jw1A6jqhYedU2nTdZg2X96yinj4UR10g3wZisHg==",
+  "dgSpecHash": "sL4vfo496WQ1rHAZDERI1N+TZoEIYb9C+yAoFNolyLgBpOXCGzQLQBNHzsmVGKdflv5aaOmS7r9rN/rFCFygbw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\back-end.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\Didie\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\Didie\\.nuget\\packages\\nettopologysuite\\2.5.0\\nettopologysuite.2.5.0.nupkg.sha512",
     "C:\\Users\\Didie\\.nuget\\packages\\nettopologysuite.io.sqlserverbytes\\2.1.0\\nettopologysuite.io.sqlserverbytes.2.1.0.nupkg.sha512",
+    "C:\\Users\\Didie\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
     "C:\\Users\\Didie\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
     "C:\\Users\\Didie\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
     "C:\\Users\\Didie\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
