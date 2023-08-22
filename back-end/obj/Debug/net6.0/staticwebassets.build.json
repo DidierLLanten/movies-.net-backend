@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "YW8iUM7xFzDo/FxG0efHjPV43ZTbBXSWYdXB2knI0Ao=",
+  "Hash": "ZcpF/0/LeSLMXh89VdUtuaWitgMfkemypCT/7NrkjkI=",
   "Source": "back-end",
   "BasePath": "_content/back-end",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\actores\\b5505924-c0f3-4cbb-8d08-7c4002d2251b.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\4e3780bf-97bd-4cba-8ec5-b1ac8ea3f144.jpg",
+      "SourceId": "back-end",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\",
+      "BasePath": "_content/back-end",
+      "RelativePath": "peliculas/4e3780bf-97bd-4cba-8ec5-b1ac8ea3f144.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\peliculas\\4e3780bf-97bd-4cba-8ec5-b1ac8ea3f144.jpg"
     }
   ]
 }
