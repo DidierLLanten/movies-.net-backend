@@ -40,6 +40,13 @@ namespace back_end.Controllers
             return mapper.Map<List<GeneroDTO>>(generos);
         }
 
+        [HttpGet("todos")]
+        public async Task<ActionResult<List<GeneroDTO>>> Todos()
+        {
+            var generos = await context.Generos.ToListAsync();
+            return mapper.Map<List<GeneroDTO>>(generos);
+        }
+
         [HttpGet("guid")]
         public ActionResult<Guid> GetGUID()
         {
