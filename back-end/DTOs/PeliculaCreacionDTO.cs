@@ -14,7 +14,7 @@ namespace back_end.DTOs
         public string Trailer { get; set; }
         public string EnCines { get; set; }
         public DateTime FechaLanzamiento { get; set; }
-        public IFormFile Poster { get; set; }
+        public IFormFile? Poster { get; set; }
         [ModelBinder(BinderType = typeof(TypeBinder<List<int>>))]
         public List<int> GenerosIds { get; set; }
         [ModelBinder(BinderType = typeof(TypeBinder<List<int>>))]

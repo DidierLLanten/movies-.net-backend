@@ -115,7 +115,7 @@ namespace back_end.Controllers
             var respuesta = new PeliculasPutGetDTO();
             respuesta.Pelicula = pelicula;
             respuesta.GenerosSeleccionados = pelicula.Generos;
-            respuesta.GenerosNoSelecionados = generosNoSeleccionadoDTO;
+            respuesta.GenerosNoSeleccionados = generosNoSeleccionadoDTO;
             respuesta.CinesSeleccionados = pelicula.Cines;
             respuesta.CinesNoSeleccionados = cinesNoSeleccionadosDTO;
             respuesta.Actores = pelicula.Actores;
@@ -144,7 +144,8 @@ namespace back_end.Controllers
             }
             EscribirOrdenActores(pelicula);
 
-            await context.SaveChangesAsync();
+            var v = await context.SaveChangesAsync();
+            Console.WriteLine(v + "TODO LO QUE SEA");
             return NoContent();
         }
 
