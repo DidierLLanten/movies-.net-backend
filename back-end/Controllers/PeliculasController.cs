@@ -158,26 +158,31 @@ namespace back_end.Controllers
         [HttpPut("{id:int}")]
         public async Task<ActionResult> Put(int id, [FromForm] PeliculaCreacionDTO peliculaCreacionDTO)
         {
-            var pelicula = await context.Peliculas
-            .Include(x => x.PeliculasActores)
-            .Include(x => x.PeliculasGeneros)
-            .Include(x => x.PeliculasCines)
-            .FirstOrDefaultAsync(x => x.Id == id);
-
-            if (pelicula == null)
+            try
             {
-                return NotFound();
-            }
+                var pelicula = await context.Peliculas
+                .Include(x => x.PeliculasActores)
+                .Include(x => x.PeliculasGeneros)
+                .Include(x => x.PeliculasCines)
+                .FirstOrDefaultAsync(x => x.Id == id);
 
-            pelicula = mapper.Map(peliculaCreacionDTO, pelicula);
-            if (peliculaCreacionDTO.Poster != null)
+                if (pelicula == null)
+                {
+                    return NotFound();
+                }
+
+                pelicula = mapper.Map(peliculaCreacionDTO, pelicula);
+                if (peliculaCreacionDTO.Poster != null)
+                {
+                    pelicula.Poster = await almacenadorArchivos.EditarArchivo(contenedor, peliculaCreacionDTO.Poster, pelicula.Poster);
+                }
+                EscribirOrdenActores(pelicula);
+                await context.SaveChangesAsync();
+            }
+            catch (Exception ex)
             {
-                pelicula.Poster = await almacenadorArchivos.EditarArchivo(contenedor, peliculaCreacionDTO.Poster, pelicula.Poster);
+                Console.WriteLine(ex.Message);
             }
-            EscribirOrdenActores(pelicula);
-
-            var v = await context.SaveChangesAsync();
-            Console.WriteLine(v + "TODO LO QUE SEA");
             return NoContent();
         }
 
