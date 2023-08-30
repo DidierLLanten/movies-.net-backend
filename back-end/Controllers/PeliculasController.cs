@@ -159,17 +159,17 @@ namespace back_end.Controllers
         public async Task<ActionResult> Put(int id, [FromForm] PeliculaCreacionDTO peliculaCreacionDTO)
         {
             var pelicula = await context.Peliculas
-                .Include(x => x.PeliculasActores)
-                .Include(x => x.PeliculasGeneros)
-                .Include(x => x.PeliculasCines)
-                .FirstOrDefaultAsync(x => x.Id == id);
+            .Include(x => x.PeliculasActores)
+            .Include(x => x.PeliculasGeneros)
+            .Include(x => x.PeliculasCines)
+            .FirstOrDefaultAsync(x => x.Id == id);
 
             if (pelicula == null)
             {
                 return NotFound();
             }
 
-            pelicula = mapper.Map<PeliculaCreacionDTO, Pelicula>(peliculaCreacionDTO);
+            pelicula = mapper.Map(peliculaCreacionDTO, pelicula);
             if (peliculaCreacionDTO.Poster != null)
             {
                 pelicula.Poster = await almacenadorArchivos.EditarArchivo(contenedor, peliculaCreacionDTO.Poster, pelicula.Poster);

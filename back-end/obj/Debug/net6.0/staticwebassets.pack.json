@@ -41,20 +41,12 @@
       "PackagePath": "staticwebassets\\peliculas\\8fedfbd0-6827-4763-9918-b613bfa51f2a.jpg"
     },
     {
-      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\925978b1-d305-4bd2-ab8e-d8b1d18afe88.jpg",
-      "PackagePath": "staticwebassets\\peliculas\\925978b1-d305-4bd2-ab8e-d8b1d18afe88.jpg"
-    },
-    {
       "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\adf197e0-5402-4572-8cda-e65fd54c3988.jpg",
       "PackagePath": "staticwebassets\\peliculas\\adf197e0-5402-4572-8cda-e65fd54c3988.jpg"
     },
     {
       "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\b08e77d9-1e5c-47b9-a6d5-db3a4ea73f12.jpg",
       "PackagePath": "staticwebassets\\peliculas\\b08e77d9-1e5c-47b9-a6d5-db3a4ea73f12.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\b3963ae6-daea-494e-a10a-5bed52d026de.jpg",
-      "PackagePath": "staticwebassets\\peliculas\\b3963ae6-daea-494e-a10a-5bed52d026de.jpg"
     },
     {
       "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\d07c250a-13ec-4dd5-a255-3c049df5b836.jpg",
@@ -71,10 +63,6 @@
     {
       "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\f8f5cb3f-3646-4287-9f76-7d869dc70556.jpg",
       "PackagePath": "staticwebassets\\peliculas\\f8f5cb3f-3646-4287-9f76-7d869dc70556.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Didie\\Desktop\\netAngular\\back-end\\back-end\\wwwroot\\peliculas\\fb973552-0610-4edc-bdb1-5b818e0232ca.jpg",
-      "PackagePath": "staticwebassets\\peliculas\\fb973552-0610-4edc-bdb1-5b818e0232ca.jpg"
     },
     {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.back-end.Microsoft.AspNetCore.StaticWebAssets.props",
